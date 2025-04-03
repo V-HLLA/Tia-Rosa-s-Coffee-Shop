@@ -1,54 +1,16 @@
-# React + TypeScript + Vite
+📌 Tia Rosa's Coffee Shop - Projeto Acadêmico (IESB)
+Este repositório contém o desenvolvimento de um site para a cafeteria Coffee Shops Tia Rosa, criado como parte de um projeto acadêmico para a faculdade IESB.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎯 Objetivo
+O objetivo deste projeto é construir um site moderno e responsivo utilizando React, seguindo os requisitos da disciplina. O site visa melhorar a divulgação da cafeteria, apresentar seus produtos e serviços, e reforçar a importância dos colaboradores na experiência do cliente.
 
-Currently, two official plugins are available:
+📄 Estrutura do Projeto
+O site inclui as seguintes páginas:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Home: Apresentação do coffee shop, produtos em destaque e chamada para ação.
 
-## Expanding the ESLint configuration
+Produtos: Descrição detalhada dos produtos oferecidos, como cafés especiais e acesso à internet.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Contato: Formulário para contato, informações da empresa e localização.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Este projeto visa demonstrar habilidades em desenvolvimento front-end, componentização e boas práticas no uso do React. 🚀
