@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import NavButton from "./NavButton";
+import { useState } from "react";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <header className="header">
       <Link to={"/"} className="logo_container">
@@ -10,12 +13,20 @@ export default function Header() {
         </h1>
         <img src="/coffee_ico.svg" alt="icone da logo" />
       </Link>
-      <nav>
-        <li className="nav_buttons">
+      <nav className="nav_container">
+        <button
+          className={isOpen ? "menu-isOpen" : "menu"}
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          <i className="material-symbols-outlined">
+            {isOpen ? "close" : "menu"}
+          </i>
+        </button>
+        <ul className={isOpen ? `nav_buttons--isOpen` : `nav_buttons`}>
           <NavButton name={"Inicio"} routeTo={"/"} />
           <NavButton name={"Produtos"} routeTo={"/produtos"} />
           <NavButton name={"Contato"} routeTo={"/contato"} />
-        </li>
+        </ul>
       </nav>
     </header>
   );

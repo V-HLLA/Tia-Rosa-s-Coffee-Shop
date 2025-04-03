@@ -215,6 +215,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  appearance: auto;
 }
 
 /**
@@ -315,6 +316,7 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield;
+  appearance: auto;
   /* 1 */
   outline-offset: -2px;
   /* 2 */
@@ -380,32 +382,48 @@ template {
 
 /* Normalize Css reset https: //github.com/necolas/normalize.css/blob/master/normalize.css */
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
 
 .header {
   background-color: #331f12;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .footer {
   background-color: #331f12;
   color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  /* position: fixed;
+  bottom: 0; */
+  padding-left: 5vw;
+  padding-right: 5vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
 
 .footer address {
-  padding-right: 5rem;
+  font-size: smaller;
+  text-align: right;
 }
 
 .social_media {
@@ -453,4 +471,83 @@ template {
   font-style: bold;
   font-size: large;
   text-transform: uppercase;
+}
+
+.nav_buttons--isOpen {
+  color: white;
+  background-color: #2b1a0f;
+  list-style-type: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  margin-top: 4vh;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  /* padding: 2vw;
+  padding-left: 5vw; */
+}
+
+.nav_buttons--isOpen a {
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  overflow: hidden;
+  padding-right: 100vw;
+  padding-left: 5vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.nav_buttons--isOpen a:hover {
+  transform: scale(1.01);
+  background-color: #362012;
+}
+
+@media (max-width: 500px) {
+  .nav_buttons {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+}
+
+.menu:hover {
+  transform: scale(1.1);
+}
+
+.menu-isOpen {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+}
+
+.material-symbols-outlined {
+  transform: scale(1.5);
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+@media (max-width: 500px) {
+  .menu {
+    display: block;
+  }
 }
