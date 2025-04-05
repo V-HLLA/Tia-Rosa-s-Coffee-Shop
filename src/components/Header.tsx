@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <header className="header">
-      <Link to={"/"} className="logo_container">
+      <Link to={"/"} className="logo_container animate-on-load">
         <h1 className="logo">
           Tia Rosa's<span className="logo_child">Coffee Shop</span>
         </h1>
@@ -23,9 +23,9 @@ export default function Header() {
           </i>
         </button>
         <ul className={isOpen ? `nav_buttons--isOpen` : `nav_buttons`}>
-          <NavButton name={"Inicio"} routeTo={"/"} />
-          <NavButton name={"Produtos"} routeTo={"/produtos"} />
-          <NavButton name={"Contato"} routeTo={"/contato"} />
+          <NavButton children={"Inicio"} routeTo={"/"} />
+          <NavButton children={"Produtos"} routeTo={"/produtos"} />
+          <NavButton children={"Contato"} routeTo={"/contato"} />
         </ul>
       </nav>
     </header>

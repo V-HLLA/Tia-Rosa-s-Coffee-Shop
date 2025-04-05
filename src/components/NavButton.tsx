@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
 
 type TNavButtonProps = {
-  name: string;
+  children: React.ReactNode;
   routeTo: string;
   style?: string | undefined;
 };
 
-export default function NavButton({ name, routeTo, style }: TNavButtonProps) {
+export default function NavButton({
+  children,
+  routeTo,
+  style,
+}: TNavButtonProps) {
   return (
     <Link to={routeTo} className={style}>
-      {name}
+      {children}
     </Link>
   );
 }

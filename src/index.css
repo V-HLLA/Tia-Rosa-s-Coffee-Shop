@@ -431,14 +431,10 @@ template {
   padding-left: 5vw;
   padding-right: 5vw;
   border-bottom: 0.8rem solid var(--color-accent-2);
-}
-
-@media (max-width:575px) {
-  .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-  }
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 
 .logo_container {
@@ -563,7 +559,7 @@ template {
 /* ---main---start--- */
 
 
-.home-container {
+.main-container {
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
@@ -624,8 +620,26 @@ template {
   }
 }
 
-.home-container.fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
+.main-container.fade-in {
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.main-container.fade-in-slower {
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes move-up {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-30vh);
+  }
+}
+
+.section-title.move-up {
+  animation: move-up 1s ease-out forwards;
 }
 
 .card-container img {
@@ -663,12 +677,15 @@ template {
 }
 
 .cta-button {
-  display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  unicode-bidi: isolate;
+  width: auto;
+}
+
+.cta-button img {
+  max-height: 1em;
+  width: auto;
+  margin-left: 0.2em;
 }
 
 .products-button {
@@ -683,7 +700,9 @@ template {
   border-radius: 0.8rem;
   cursor: pointer;
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  display: inline-block;
+  display: inline-flex;
+  flex-grow: 0;
+  flex-shrink: 1;
   transform-origin: left;
 }
 
@@ -709,11 +728,69 @@ template {
 }
 
 .products-button.animate-on-load {
-  animation: bounce-in 1.2s ease-in-out;
+  animation: bounce-in 1.8s ease-in-out;
 }
 
+.logo_container.animate-on-load {
+  animation: bounce-in 0.6s ease-in-out;
+}
 
 /* ---main---end--- */
+
+/* ---products---route---start */
+.vertical-card-container {
+  display: inline-flex;
+  flex: 1 1 100%;
+  gap: 5vw;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  opacity: 0;
+  animation-name: slideInUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.card img {
+  padding-bottom: 0.8rem;
+  background-color: var(--color-accent-3);
+  border-radius: 0.5rem;
+  transition: transform 0.8s ease-in-out
+}
+
+.card img:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width:800px) {
+  .vertical-card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---products---route---end */
 
 /* ---footer---start--- */
 .footer {

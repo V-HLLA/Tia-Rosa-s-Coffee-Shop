@@ -3,7 +3,7 @@ import NavButton from "./NavButton";
 export default function MainContainer() {
   return (
     <>
-      <main className="home-container fade-in">
+      <main className="main-container fade-in">
         <h1 className="section-title">Bem-vindo ao Tia Rosa's Coffee shop!</h1>
 
         <div className="content-container">
@@ -27,13 +27,15 @@ export default function MainContainer() {
             <img src="src\images\signature_drinks.jpg" alt="Cafés da casa" />
             <div className="cta-button">
               <NavButton
-                name={`Conheça os Cafés artesanais da casa!`}
                 routeTo={"/produtos"}
                 style="products-button animate-on-load"
-              />
+              >
+                Conheça os Cafés especiais da casa!
+                <img alt="icone da logo" src="/coffee_ico.svg" />
+              </NavButton>
             </div>
             <p className="description-title">
-              Café artesanal, feito com paixão
+              Café especial da casa, feito com paixão com gostinho de amor!
             </p>
             <p className="description-text">
               Selecionamos os melhores grãos para proporcionar um sabor único em
