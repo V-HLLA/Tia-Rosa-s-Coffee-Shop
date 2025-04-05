@@ -1,11 +1,13 @@
+import NavButton from "./NavButton";
+
 export default function MainContainer() {
   return (
     <>
-      <main className="home-container">
+      <main className="home-container fade-in">
         <h1 className="section-title">Bem-vindo ao Tia Rosa's Coffee shop!</h1>
 
         <div className="content-container">
-          <div className="component-container">
+          <div className="card-container fade-in">
             <img
               src="src\images\coffee_shop_ambient.png"
               alt="loja Tia Rosa's coffee shop"
@@ -21,11 +23,15 @@ export default function MainContainer() {
             </p>
           </div>
 
-          <div className="component-container">
+          <div className="card-container fade-in">
             <img src="src\images\signature_drinks.jpg" alt="Cafés da casa" />
-            <h2 className="section-title">
-              Conheça os Cafés artesanais da casa!
-            </h2>
+            <div className="cta-button">
+              <NavButton
+                name={`Conheça os Cafés artesanais da casa!`}
+                routeTo={"/produtos"}
+                style="products-button animate-on-load"
+              />
+            </div>
             <p className="description-title">
               Café artesanal, feito com paixão
             </p>
@@ -36,11 +42,11 @@ export default function MainContainer() {
             </p>
           </div>
 
-          <div className="component-container">
+          <div className="card-container fade-in">
             <img src="src\images\qr_code_sign.png" alt="QR code para o wifi" />
           </div>
 
-          <div className="component-container">
+          <div className="card-container fade-in">
             <h2 className="section-title">Internet Premium - Wifi Gratis</h2>
             <p className="description-title">
               Conecte-se com qualidade com nosso QR code
@@ -55,7 +61,7 @@ export default function MainContainer() {
         </div>
 
         <div className="bottom-container">
-          <div className="component-container ">
+          <div className="card-container fade-in">
             <h2 className="section-title">Colaboradores atentivos</h2>
             <p className="description-title">Qualidade que vem de dentro</p>
             <p className="description-text">
@@ -67,7 +73,7 @@ export default function MainContainer() {
           <img
             src="src\images\Baristas_vertical.png"
             alt="Baristas servindo café com grande prazer"
-            className="component-container "
+            className="card-container fade-in "
           />
         </div>
       </main>

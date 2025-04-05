@@ -420,10 +420,6 @@ template {
   /* Charcoal Brown */
   --color-text-light: #fffaf3;
   /* Soft Cream */
-
-  /* Call-to-Action / Highlights */
-  --color-cta: #e6a96b;
-  /* Warm Amber */
 }
 
 /* ---header---start--- */
@@ -439,7 +435,8 @@ template {
 
 @media (max-width:575px) {
   .header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
   }
 }
@@ -584,7 +581,7 @@ template {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  /* spacing between components */
+  /* spacing between cards */
   justify-content: center;
 }
 
@@ -602,7 +599,7 @@ template {
   }
 }
 
-.component-container {
+.card-container {
   flex: 1 1 77vh;
   /* allows two in a row on big screens */
   min-width: 300px;
@@ -614,7 +611,24 @@ template {
   padding-top: 1vh;
 }
 
-.component-container img {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+    /* subtle slide up */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-container.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.card-container img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -647,6 +661,57 @@ template {
   color: var(--color-text-dark);
   font-size: large;
 }
+
+.cta-button {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+.products-button {
+  font-family: "Winky Sans", sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  display: inline-block;
+  transform-origin: left;
+}
+
+.products-button:hover {
+  transform: scale(1.05);
+  background-color: var(--color-accent-3);
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.products-button.animate-on-load {
+  animation: bounce-in 1.2s ease-in-out;
+}
+
 
 /* ---main---end--- */
 
