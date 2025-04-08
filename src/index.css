@@ -587,6 +587,12 @@ body {
   margin-bottom: 10vh;
   min-height: 200px;
   min-width: 200px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 
 @keyframes pulseFill {
