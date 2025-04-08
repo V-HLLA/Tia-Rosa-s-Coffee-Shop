@@ -18,6 +18,8 @@ export default function Header({ handleClick }: TProps) {
         </h1>
         <img src="/coffee_ico.svg" alt="icone da logo" />
       </Link>
+
+      {/* nav hamburguer menu */}
       <nav className="nav_container">
         <button
           className={isOpen ? "menu-isOpen" : "menu"}
@@ -32,16 +34,19 @@ export default function Header({ handleClick }: TProps) {
             children={"Inicio"}
             routeTo={"/"}
             handleClick={handleClick}
+            setIsOpen={setIsOpen}
           />
           <NavButton
             children={"Produtos"}
             routeTo={"/produtos"}
             handleClick={handleClick}
+            setIsOpen={setIsOpen}
           />
           <NavButton
             children={"Contato"}
             routeTo={"/contato"}
             handleClick={handleClick}
+            setIsOpen={setIsOpen}
           />
         </ul>
       </nav>

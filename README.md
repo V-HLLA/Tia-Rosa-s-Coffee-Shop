@@ -1,4 +1,4 @@
-# Tia Rosa's Coffee Shop – Projeto Acadêmico (IESB) (PT-BR)
+# Tia Rosa's Coffee Shop ☕ – Projeto Acadêmico (IESB) (PT-BR)
 
 Este repositório contém o desenvolvimento de um site para a **Tia Rosa's Coffee Shop**, criado como parte de um projeto acadêmico da faculdade **IESB**.
 
