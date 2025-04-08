@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import NavButton from "./NavButton";
 import { useState } from "react";
+import { TProps } from "../lib/types";
 
-export default function Header() {
+export default function Header({ handleClick }: TProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <header className="header">
-      <Link to={"/"} className="logo_container animate-on-load">
+      <Link
+        to={"/"}
+        className="logo_container animate-on-load"
+        onClick={() => handleClick()}
+      >
         <h1 className="logo">
           Tia Rosa's<span className="logo_child">Coffee Shop</span>
         </h1>
@@ -23,9 +28,21 @@ export default function Header() {
           </i>
         </button>
         <ul className={isOpen ? `nav_buttons--isOpen` : `nav_buttons`}>
-          <NavButton children={"Inicio"} routeTo={"/"} />
-          <NavButton children={"Produtos"} routeTo={"/produtos"} />
-          <NavButton children={"Contato"} routeTo={"/contato"} />
+          <NavButton
+            children={"Inicio"}
+            routeTo={"/"}
+            handleClick={handleClick}
+          />
+          <NavButton
+            children={"Produtos"}
+            routeTo={"/produtos"}
+            handleClick={handleClick}
+          />
+          <NavButton
+            children={"Contato"}
+            routeTo={"/contato"}
+            handleClick={handleClick}
+          />
         </ul>
       </nav>
     </header>

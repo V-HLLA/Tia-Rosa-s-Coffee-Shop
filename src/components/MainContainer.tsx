@@ -1,6 +1,7 @@
+import { TProps } from "../lib/types";
 import NavButton from "./NavButton";
 
-export default function MainContainer() {
+export default function MainContainer({ handleClick }: TProps) {
   return (
     <>
       <main className="main-container fade-in">
@@ -29,6 +30,7 @@ export default function MainContainer() {
               <NavButton
                 routeTo={"/produtos"}
                 style="products-button animate-on-load"
+                handleClick={handleClick}
               >
                 Conheça os Cafés especiais da casa!
                 <img alt="icone da logo" src="/coffee_ico.svg" />

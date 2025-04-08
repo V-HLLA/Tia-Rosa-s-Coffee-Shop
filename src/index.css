@@ -159,7 +159,7 @@ sup {
 
 img {
   border-style: none;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
@@ -398,6 +398,19 @@ template {
   font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 :root {
   /* Primary Brand Color */
   --color-primary: #331f12;
@@ -420,6 +433,10 @@ template {
   /* Charcoal Brown */
   --color-text-light: #fffaf3;
   /* Soft Cream */
+}
+
+body {
+  background-color: var(--color-secondary);
 }
 
 /* ---header---start--- */
@@ -559,6 +576,45 @@ template {
 }
 
 /* ---header---end--- */
+
+.loading {
+  display: flex;
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  margin-bottom: 10vh;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+@keyframes pulseFill {
+  0% {
+    opacity: 0;
+    ;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading svg {
+  max-width: 6vw;
+  color: var(--color-accent-2);
+  animation: pulseFill 1.5s infinite;
+}
+
+@media (max-width:575px) {
+  .loading svg {
+    max-width: 12vw;
+  }
+}
 
 /* ---main---start--- */
 
@@ -770,7 +826,7 @@ template {
 
 .card img:hover {
   transform: translateY(-4px) scale(1.04);
-  box-shadow: 1 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width:825px) {
