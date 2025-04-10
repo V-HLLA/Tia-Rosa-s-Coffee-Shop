@@ -38,7 +38,7 @@ export default function Contact() {
               height="300"
               allowFullScreen={false}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
           </div>
         </div>

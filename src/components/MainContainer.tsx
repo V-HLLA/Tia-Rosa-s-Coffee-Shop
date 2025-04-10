@@ -7,11 +7,13 @@ export default function MainContainer({ handleClick }: TProps) {
       <main className="main-container fade-in">
         <h1 className="section-title">Bem-vindo ao Tia Rosa's Coffee shop!</h1>
 
+        {/* WELCOME SECTION */}
         <div className="content-container">
           <div className="card-container fade-in">
             <img
               src="src\images\coffee_shop_ambient.png"
               alt="loja Tia Rosa's coffee shop"
+              loading="lazy"
             />
             <p className="description-title">
               Onde o aroma do café encontra a conexão perfeita.
@@ -24,8 +26,13 @@ export default function MainContainer({ handleClick }: TProps) {
             </p>
           </div>
 
+          {/* CTA SECTION */}
           <div className="card-container fade-in">
-            <img src="src\images\signature_drinks.jpg" alt="Cafés da casa" />
+            <img
+              src="src\images\signature_drinks.jpg"
+              alt="Cafés da casa"
+              loading="lazy"
+            />
             <div className="cta-button">
               <NavButton
                 routeTo={"/produtos"}
@@ -46,10 +53,16 @@ export default function MainContainer({ handleClick }: TProps) {
             </p>
           </div>
 
+          {/* VISUAL BREAK */}
           <div className="card-container fade-in">
-            <img src="src\images\qr_code_sign.png" alt="QR code para o wifi" />
+            <img
+              src="src\images\qr_code_sign.png"
+              alt="QR code para o wifi"
+              loading="lazy"
+            />
           </div>
 
+          {/* VISUAL DESCRIPTION */}
           <div className="card-container fade-in">
             <h2 className="section-title">Internet Premium - Wifi Gratis</h2>
             <p className="description-title">
@@ -64,6 +77,7 @@ export default function MainContainer({ handleClick }: TProps) {
           </div>
         </div>
 
+        {/* BOTTOM CONTAINER */}
         <div className="bottom-container">
           <div className="card-container fade-in">
             <h2 className="section-title">Colaboradores atentivos</h2>
@@ -78,6 +92,7 @@ export default function MainContainer({ handleClick }: TProps) {
             src="src\images\Baristas_vertical.png"
             alt="Baristas servindo café com grande prazer"
             className="card-container fade-in "
+            loading="lazy"
           />
         </div>
       </main>

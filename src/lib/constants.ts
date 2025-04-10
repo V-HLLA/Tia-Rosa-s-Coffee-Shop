@@ -42,3 +42,18 @@ export const CARD_CONTENTS = [
         energia em cada gole. Ideal para dias quentes e momentos leves.`,
   },
 ];
+
+export const NAV_CONTENTS = [
+  {
+    children: "inicio",
+    routeTo: "/",
+  },
+  {
+    children: "Produtos",
+    routeTo: "/produtos",
+  },
+  {
+    children: "Contato",
+    routeTo: "/contato",
+  },
+];

@@ -418,21 +418,17 @@ main {
 
   /* Secondary / Background */
   --color-secondary: #f5f0e6;
-  /* Cream Beige */
 
   /* Accent Colors */
   --color-accent-1: #e6cfbe;
-  /* Caramel */
   --color-accent-2: #7a4e32;
-  /* Mocha */
   --color-accent-3: #5f4123;
-  /* Expresso */
+  --color-accent-4: #2b1a0f;
 
   /* Text Colors */
   --color-text-dark: #1e120a;
-  /* Charcoal Brown */
   --color-text-light: #fffaf3;
-  /* Soft Cream */
+
 }
 
 body {
@@ -500,7 +496,7 @@ body {
 
 .nav_buttons--isOpen {
   color: var(--color-text-light);
-  background-color: #2b1a0f;
+  background-color: var(--color-accent-4);
   list-style-type: none;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: right;
@@ -514,10 +510,12 @@ body {
   left: 0;
   width: 100%;
   padding: 0;
+  border-bottom: 0.8rem solid var(--color-accent-2);
 }
 
 .nav_buttons--isOpen a {
   text-decoration: none;
+  background-color: var(--color-accent-4);
   color: var(--color-text-light);
   text-decoration: none;
   font-size: 1rem;
@@ -530,7 +528,7 @@ body {
 
 .nav_buttons--isOpen a:hover {
   transform: scale(1.01);
-  background-color: #362012;
+  background-color: var(--color-text-dark);
 }
 
 @media (max-width: 500px) {
@@ -611,7 +609,7 @@ body {
 }
 
 .loading svg {
-  max-width: 6vw;
+  max-width: 4vw;
   color: var(--color-accent-2);
   animation: pulseFill 1.5s infinite;
 }
@@ -794,7 +792,7 @@ body {
 }
 
 .logo_container.animate-on-load {
-  animation: bounce-in 0.6s ease-in-out;
+  animation: bounce-in 1s ease-in-out;
 }
 
 /* ---main---end--- */

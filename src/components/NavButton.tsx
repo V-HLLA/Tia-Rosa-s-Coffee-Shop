@@ -5,7 +5,7 @@ type TNavButtonProps = {
   routeTo: string;
   style?: string | undefined;
   handleClick: () => void;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export default function NavButton({
@@ -21,7 +21,7 @@ export default function NavButton({
       className={style}
       onClick={() => {
         handleClick();
-        setIsOpen(false);
+        if (setIsOpen) setIsOpen(false);
       }}
     >
       {children}

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import NavButton from "./NavButton";
 import { useState } from "react";
 import { TProps } from "../lib/types";
+import { NAV_CONTENTS } from "../lib/constants";
 
 export default function Header({ handleClick }: TProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -30,24 +31,15 @@ export default function Header({ handleClick }: TProps) {
           </i>
         </button>
         <ul className={isOpen ? `nav_buttons--isOpen` : `nav_buttons`}>
-          <NavButton
-            children={"Inicio"}
-            routeTo={"/"}
-            handleClick={handleClick}
-            setIsOpen={setIsOpen}
-          />
-          <NavButton
-            children={"Produtos"}
-            routeTo={"/produtos"}
-            handleClick={handleClick}
-            setIsOpen={setIsOpen}
-          />
-          <NavButton
-            children={"Contato"}
-            routeTo={"/contato"}
-            handleClick={handleClick}
-            setIsOpen={setIsOpen}
-          />
+          {NAV_CONTENTS.map((navContent, index) => (
+            <NavButton
+              key={index}
+              children={navContent.children}
+              routeTo={navContent.routeTo}
+              handleClick={handleClick}
+              setIsOpen={setIsOpen}
+            />
+          ))}
         </ul>
       </nav>
     </header>
