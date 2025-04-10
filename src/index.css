@@ -881,11 +881,17 @@ body {
   text-align: right;
 }
 
-.social_media {
+.social-media {
   text-decoration: none;
   list-style-type: none;
   list-style: none;
   padding: 0;
+}
+
+.social-media a {
+  color: var(--color-text-light);
+  text-decoration: underline;
+  font-weight: lighter;
 }
 
 /* ---footer-end--- */
