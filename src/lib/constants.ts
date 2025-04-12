@@ -57,3 +57,21 @@ export const NAV_CONTENTS = [
     routeTo: "/contato",
   },
 ];
+
+export const socialLinks = [
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/tiarosacoffee",
+    label: "@tiarosacoffee",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/tiarosacoffee",
+    label: "Tia Rosa's Coffee Shop",
+  },
+  {
+    name: "TikTok",
+    url: "https://www.tiktok.com/@tiarosacoffee",
+    label: "@tiarosacoffee",
+  },
+];

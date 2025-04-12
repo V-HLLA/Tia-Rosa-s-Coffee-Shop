@@ -1,38 +1,18 @@
+import { socialLinks } from "../lib/constants";
+
 export default function Footer() {
   return (
     <footer className="footer">
       <nav aria-label="Social media links">
         <ul className="social-media">
-          <li>
-            <span>Instagram: </span>
-            <a
-              href="https://www.instagram.com/tiarosacoffee"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @tiarosacoffee
-            </a>
-          </li>
-          <li>
-            <span>Facebook: </span>
-            <a
-              href="https://www.facebook.com/tiarosacoffee"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Tia Rosa's Coffee Shop
-            </a>
-          </li>
-          <li>
-            <span>TikTok: </span>
-            <a
-              href="https://www.tiktok.com/@tiarosacoffee"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @tiarosacoffee
-            </a>
-          </li>
+          {socialLinks.map(({ name, url, label }) => (
+            <li key={name}>
+              <span>{name}: </span>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
       <address>
