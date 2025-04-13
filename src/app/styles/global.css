@@ -756,6 +756,8 @@ body {
   font-size: larger;
   text-decoration: none;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   color: var(--color-text-light);
   background-color: var(--color-primary);
   padding: 0.5rem;
@@ -766,6 +768,10 @@ body {
   flex-grow: 0;
   flex-shrink: 1;
   transform-origin: left;
+}
+
+.products-button-image {
+  width: auto;
 }
 
 .products-button:hover {

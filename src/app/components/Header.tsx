@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
-import NavButton from "./NavButton";
-import { useState } from "react";
-import { NAV_CONTENTS } from "../../lib/constants";
 import Image from "next/image";
+import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { NAV_CONTENTS } from "../../lib/constants";
+import NavButton from "./NavButton";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -17,8 +19,10 @@ export default function Header() {
         <Image
           src="/coffee_ico.svg"
           alt="icone da logo"
-          width={30}
-          height={30}
+          width={19}
+          height={19}
+          className="products-button-image"
+          priority={true}
         />
       </Link>
 
@@ -29,7 +33,7 @@ export default function Header() {
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <i className="material-symbols-outlined">
-            {isOpen ? "close" : "menu"}
+            {isOpen ? <CloseIcon /> : <MenuIcon />}
           </i>
         </button>
         <ul className={isOpen ? `nav_buttons--isOpen` : `nav_buttons`}>

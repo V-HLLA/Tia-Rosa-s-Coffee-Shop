@@ -40,6 +40,7 @@ export default function MainContainer() {
               src={signature_drinks}
               alt="Cafés da casa"
               className="card-image"
+              priority={true}
             />
             <div className="cta-button">
               <Link
@@ -52,6 +53,7 @@ export default function MainContainer() {
                   height={60}
                   alt="icone da logo"
                   src="/coffee_ico.svg"
+                  priority={true}
                 />
               </Link>
             </div>

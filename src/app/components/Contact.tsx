@@ -18,9 +18,10 @@ export default function Contact() {
         <section className="card-container fade-in">
           <h2 className="description-title">Informações de Contato</h2>
           <address className="description-text">
-            <strong>Endereço:</strong> Av. das Cafeteiras, nº 123 - Brasília, DF
+            <strong>Endereço:</strong> Setor Comercial Sul Q. 6 Quadra 8 Asa
+            Sul, Brasília - DF, 70333-900
             <br />
-            <strong>Telefone:</strong> (61) 9 9999-9999
+            <strong>Telefone:</strong> (61) 9 98715-6775
             <br />
             <strong>Email:</strong>{" "}
             <a href="mailto:contato@tiarosacoffee.com.br">
