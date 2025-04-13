@@ -1,7 +1,7 @@
 export const CARD_CONTENTS = [
   {
     id: "Espresso Clássico",
-    imageSrc: "src/images/Espresso_vertical.jpg",
+    imageSrc: "/Espresso_vertical.jpg",
     imageAlt: "Espresso Clássico",
     title: "Espresso Clássico",
     descriptionTitle: "Chocolate amargo, nozes torradas, toque cítrico suave",
@@ -12,7 +12,7 @@ export const CARD_CONTENTS = [
   },
   {
     id: "Cappuccino Artesanal",
-    imageSrc: "src/images/Cappuccino_vertical.jpg",
+    imageSrc: "/Cappuccino_vertical.jpg",
     imageAlt: "Cappuccino Artesanal",
     title: "Cappuccino Artesanal",
     descriptionTitle: "Cacau suave, caramelo leve, espresso equilibrado",
@@ -23,7 +23,7 @@ export const CARD_CONTENTS = [
   },
   {
     id: "Latte Cremoso",
-    imageSrc: "src/images/Latte_vertical.jpg",
+    imageSrc: "/Latte_vertical.jpg",
     imageAlt: "Latte Cremoso",
     title: "Latte Cremoso",
     descriptionTitle: "Baunilha suave, caramelo, espresso aveludado",
@@ -33,7 +33,7 @@ export const CARD_CONTENTS = [
   },
   {
     id: "Iced Coffee Refrescante",
-    imageSrc: "src/images/IcedCoffee_vertical.jpg",
+    imageSrc: "/IcedCoffee_vertical.jpg",
     imageAlt: "Iced Coffee Refrescante",
     title: "Iced Coffee Refrescante",
     descriptionTitle: "Café suave, notas frutadas, final refrescante",

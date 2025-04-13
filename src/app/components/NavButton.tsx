@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 type TNavButtonProps = {
   children: React.ReactNode;
   routeTo: string;
   style?: string | undefined;
-  handleClick: () => void;
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
@@ -12,15 +11,13 @@ export default function NavButton({
   children,
   routeTo,
   style,
-  handleClick,
   setIsOpen,
 }: TNavButtonProps) {
   return (
     <Link
-      to={routeTo}
+      href={routeTo}
       className={style}
       onClick={() => {
-        handleClick();
         if (setIsOpen) setIsOpen(false);
       }}
     >

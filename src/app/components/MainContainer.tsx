@@ -1,7 +1,11 @@
-import { TProps } from "../lib/types";
-import NavButton from "./NavButton";
+import Image from "next/image";
+import coffee_shop_ambient from "../../images/coffee_shop_ambient.png";
+import signature_drinks from "../../images/signature_drinks.jpg";
+import qr_code_sign from "../../images/qr_code_sign.png";
+import Baristas_vertical from "../../images/Baristas_vertical.png";
+import Link from "next/link";
 
-export default function MainContainer({ handleClick }: TProps) {
+export default function MainContainer() {
   return (
     <>
       <main className="main-container fade-in">
@@ -10,10 +14,12 @@ export default function MainContainer({ handleClick }: TProps) {
         {/* WELCOME SECTION */}
         <div className="content-container">
           <div className="card-container fade-in">
-            <img
-              src="src\images\coffee_shop_ambient.png"
+            <Image
+              src={coffee_shop_ambient}
               alt="loja Tia Rosa's coffee shop"
-              loading="lazy"
+              width={800}
+              height={600}
+              priority={true}
             />
             <p className="description-title">
               Onde o aroma do café encontra a conexão perfeita.
@@ -28,20 +34,25 @@ export default function MainContainer({ handleClick }: TProps) {
 
           {/* CTA SECTION */}
           <div className="card-container fade-in">
-            <img
-              src="src\images\signature_drinks.jpg"
+            <Image
+              width={800}
+              height={600}
+              src={signature_drinks}
               alt="Cafés da casa"
-              loading="lazy"
             />
             <div className="cta-button">
-              <NavButton
-                routeTo={"/produtos"}
-                style="products-button animate-on-load"
-                handleClick={handleClick}
+              <Link
+                href={"/produtos"}
+                className="products-button animate-on-load"
               >
                 Conheça os Cafés especiais da casa!
-                <img alt="icone da logo" src="/coffee_ico.svg" />
-              </NavButton>
+                <Image
+                  width={80}
+                  height={60}
+                  alt="icone da logo"
+                  src="/coffee_ico.svg"
+                />
+              </Link>
             </div>
             <p className="description-title">
               Café especial da casa, feito com paixão com gostinho de amor!
@@ -55,8 +66,10 @@ export default function MainContainer({ handleClick }: TProps) {
 
           {/* VISUAL BREAK */}
           <div className="card-container fade-in">
-            <img
-              src="src\images\qr_code_sign.png"
+            <Image
+              width={800}
+              height={600}
+              src={qr_code_sign}
               alt="QR code para o wifi"
               loading="lazy"
             />
@@ -88,8 +101,10 @@ export default function MainContainer({ handleClick }: TProps) {
               cada colaborador, criando um ambiente onde todos evoluem juntos.
             </p>
           </div>
-          <img
-            src="src\images\Baristas_vertical.png"
+          <Image
+            width={600}
+            height={800}
+            src={Baristas_vertical}
             alt="Baristas servindo café com grande prazer"
             className="card-container fade-in "
             loading="lazy"

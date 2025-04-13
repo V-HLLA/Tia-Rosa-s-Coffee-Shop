@@ -161,7 +161,14 @@ img {
   border-style: none;
   max-width: 100%;
   height: auto;
+  width: auto;
   display: block;
+  object-fit: contain;
+}
+
+image {
+  height: auto;
+  width: auto;
   object-fit: contain;
 }
 

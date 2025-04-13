@@ -1,3 +1,5 @@
+// import Image from "next/image";
+import Image from "next/image";
 import { CARD_CONTENTS } from "../lib/constants";
 
 export default function Card() {
@@ -11,7 +13,12 @@ export default function Card() {
             animationDelay: `${index * 0.6}s`,
           }}
         >
-          <img src={card.imageSrc} alt={card.imageAlt} />
+          <Image
+            width={768}
+            height={1283}
+            src={card.imageSrc}
+            alt={card.imageAlt}
+          />
           <h2 className="section-title">{card.title}</h2>
           <p className="description-title">{card.descriptionTitle}</p>
           <p className="description-text">{card.description}</p>
