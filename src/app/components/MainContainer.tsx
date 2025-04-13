@@ -39,6 +39,7 @@ export default function MainContainer() {
               height={600}
               src={signature_drinks}
               alt="Cafés da casa"
+              className="card-image"
             />
             <div className="cta-button">
               <Link
@@ -72,6 +73,7 @@ export default function MainContainer() {
               src={qr_code_sign}
               alt="QR code para o wifi"
               loading="lazy"
+              className="card-image"
             />
           </div>
 

@@ -2,7 +2,8 @@
 import Link from "next/link";
 import NavButton from "./NavButton";
 import { useState } from "react";
-import { NAV_CONTENTS } from "../lib/constants";
+import { NAV_CONTENTS } from "../../lib/constants";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -13,7 +14,12 @@ export default function Header() {
         <h1 className="logo">
           Tia Rosa's<span className="logo_child">Coffee Shop</span>
         </h1>
-        <img src="/coffee_ico.svg" alt="icone da logo" />
+        <Image
+          src="/coffee_ico.svg"
+          alt="icone da logo"
+          width={30}
+          height={30}
+        />
       </Link>
 
       {/* nav hamburguer menu */}

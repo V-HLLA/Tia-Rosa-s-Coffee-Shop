@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "../index.css";
+import "../app/styles/global.css";
 
 export const metadata: Metadata = {
-  title: "My app",
-  description: "my app is a test app",
+  title: "Tia Rosa's Coffee Shop",
+  description: "A cafeteria mais adorada do Brasil!",
   icons: {
     icon: "/coffee_ico.svg",
   },
@@ -26,7 +26,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          rel="preload"
+          rel="preconnect"
           href="https://fonts.gstatic.com/s/winkysans/v1/ll85K2SDUiG1Hpf2p06bN60okw.woff2"
           as="font"
           type="font/woff2"
@@ -42,13 +42,11 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           crossOrigin="anonymous"
         />
-
-        <title>Tia Rosa's Coffee Shop</title>
       </head>
       <body>
         <div id="root">
           <Header />
-          <main>{children}</main>
+          {children}
           <Footer />
         </div>
       </body>

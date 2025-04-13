@@ -1,6 +1,5 @@
-// import Image from "next/image";
 import Image from "next/image";
-import { CARD_CONTENTS } from "../lib/constants";
+import { CARD_CONTENTS } from "../../lib/constants";
 
 export default function Card() {
   return (

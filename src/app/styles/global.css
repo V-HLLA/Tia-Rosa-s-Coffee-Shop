@@ -166,12 +166,6 @@ img {
   object-fit: contain;
 }
 
-image {
-  height: auto;
-  width: auto;
-  object-fit: contain;
-}
-
 /* Forms
    ========================================================================== */
 
@@ -709,8 +703,9 @@ body {
   animation: move-up 1s ease-out forwards;
 }
 
-.card-container img {
-  width: 100%;
+.card-image {
+  min-width: 100%;
+  width: auto;
   height: auto;
   object-fit: cover;
   align-self: center;
