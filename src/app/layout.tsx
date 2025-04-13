@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "../app/styles/global.css";
@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     icon: "/coffee_ico.svg",
   },
 };
+
+export const viewport: Viewport = { themeColor: "#331f12" };
 
 export default function RootLayout({
   children,
