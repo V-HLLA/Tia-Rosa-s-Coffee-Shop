@@ -2,7 +2,7 @@ import Image from "next/image";
 import coffee_shop_ambient from "../../images/coffee_shop_ambient.png";
 import signature_drinks from "../../images/signature_drinks.jpg";
 import qr_code_sign from "../../images/qr_code_sign.png";
-import baristas_vertical from "../../images/baristas_vertical.png";
+import baristas_vertical from "../../images/Baristas_Vertical.png";
 import Link from "next/link";
 
 export default function MainContainer() {
