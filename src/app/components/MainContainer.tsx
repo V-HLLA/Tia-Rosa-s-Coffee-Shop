@@ -2,7 +2,7 @@ import Image from "next/image";
 import coffee_shop_ambient from "../../images/coffee_shop_ambient.png";
 import signature_drinks from "../../images/signature_drinks.jpg";
 import qr_code_sign from "../../images/qr_code_sign.png";
-import Baristas_vertical from "../../images/baristas_vertical.png";
+import baristas_vertical from "../../images/baristas_vertical.png";
 import Link from "next/link";
 
 export default function MainContainer() {
@@ -108,7 +108,7 @@ export default function MainContainer() {
           <Image
             width={600}
             height={800}
-            src={Baristas_vertical}
+            src={baristas_vertical}
             alt="Baristas servindo café com grande prazer"
             className="card-container fade-in "
             loading="lazy"
