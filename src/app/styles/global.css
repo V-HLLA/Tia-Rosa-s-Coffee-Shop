@@ -510,7 +510,7 @@ body {
   gap: 15px;
 }
 
-.nav_buttons a {
+.nav_buttons li a {
   text-decoration: none;
   color: var(--color-text-light);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -519,7 +519,7 @@ body {
   text-transform: uppercase;
 }
 
-.nav_buttons a:hover {
+.nav_buttons li a:hover {
   color: var(--color-accent-1);
 }
 
@@ -542,7 +542,7 @@ body {
   border-bottom: 0.8rem solid var(--color-accent-2);
 }
 
-.nav_buttons--isOpen a {
+.nav_buttons--isOpen li {
   text-decoration: none;
   background-color: var(--color-accent-4);
   color: var(--color-text-light);
@@ -555,7 +555,13 @@ body {
   padding-bottom: 1vh;
 }
 
-.nav_buttons--isOpen a:hover {
+.nav_buttons--isOpen a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav_buttons--isOpen li:hover {
   transform: scale(1.01);
   background-color: var(--color-accent-5);
 }
@@ -934,10 +940,14 @@ body {
   list-style: none;
   padding: 0;
   padding-inline-start: 0;
+  color: var(--color-text-dark);
+}
+
+.social-media-links-footer {
   color: var(--color-text-light);
 }
 
-.social-media a {
+.social-media-links-footer a {
   color: var(--color-text-light);
   text-decoration: underline;
   font-weight: lighter;

@@ -6,7 +6,7 @@ export default function Footer() {
       <nav aria-label="Social media links">
         <ul className="social-media">
           {SOCIAL_LINKS.map(({ name, url, label }) => (
-            <li key={name}>
+            <li key={name} className="social-media-links-footer">
               <span>{name}: </span>
               <a href={url} target="_blank" rel="noopener noreferrer">
                 {label}
