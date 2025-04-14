@@ -17,14 +17,6 @@ export default function Header() {
           Tia Rosa's<span className="logo_child">Coffee Shop</span>
         </h1>
         <CoffeeIcon className="coffee-icon-svg" />
-        {/* <Image
-          src={CoffeeIcon}
-          alt="icone da logo"
-          width={19}
-          height={19}
-          className="products-button-image"
-          priority={true}
-        /> */}
       </Link>
 
       {/* nav hamburguer menu */}
@@ -39,12 +31,13 @@ export default function Header() {
         </button>
         <ul className={isOpen ? `nav_buttons--isOpen` : `nav_buttons`}>
           {NAV_CONTENTS.map((navContent, index) => (
-            <NavButton
-              key={index}
-              children={navContent.children}
-              routeTo={navContent.routeTo}
-              setIsOpen={setIsOpen}
-            />
+            <li key={index}>
+              <NavButton
+                children={navContent.children}
+                routeTo={navContent.routeTo}
+                setIsOpen={setIsOpen}
+              />
+            </li>
           ))}
         </ul>
       </nav>

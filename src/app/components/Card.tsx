@@ -5,7 +5,7 @@ export default function Card() {
   return (
     <>
       {CARD_CONTENTS.map((card, index) => (
-        <div
+        <article
           key={index}
           className="card"
           style={{
@@ -23,7 +23,7 @@ export default function Card() {
           <h2 className="section-title">{card.title}</h2>
           <p className="description-title">{card.descriptionTitle}</p>
           <p className="description-text">{card.description}</p>
-        </div>
+        </article>
       ))}
     </>
   );

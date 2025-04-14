@@ -13,8 +13,8 @@ export default function MainContainer() {
         <h1 className="section-title">Bem-vindo a Tia Rosa's Coffee shop!</h1>
 
         {/* WELCOME SECTION */}
-        <div className="content-container">
-          <div className="card-container fade-in">
+        <article className="content-container">
+          <section className="card-container fade-in">
             <Image
               src={coffee_shop_ambient}
               alt="loja Tia Rosa's coffee shop"
@@ -31,10 +31,10 @@ export default function MainContainer() {
               qualidade e um atendimento que valoriza cada detalhe da sua
               experiência.
             </p>
-          </div>
+          </section>
 
           {/* CTA SECTION */}
-          <div className="card-container fade-in">
+          <section className="card-container fade-in">
             <Image
               width={800}
               height={600}
@@ -60,10 +60,10 @@ export default function MainContainer() {
               cada xícara. Seja expresso, cappuccino ou filtrado, temos o café
               perfeito para cada momento do seu dia.
             </p>
-          </div>
+          </section>
 
           {/* VISUAL BREAK */}
-          <div className="card-container fade-in">
+          <section className="card-container fade-in">
             <Image
               width={800}
               height={600}
@@ -72,10 +72,10 @@ export default function MainContainer() {
               loading="lazy"
               className="card-image"
             />
-          </div>
+          </section>
 
           {/* VISUAL DESCRIPTION */}
-          <div className="card-container fade-in">
+          <section className="card-container fade-in">
             <h2 className="section-title">Internet Premium - Wifi Gratis</h2>
             <p className="description-title">
               Conecte-se com qualidade com nosso QR code
@@ -86,12 +86,12 @@ export default function MainContainer() {
               com conforto. Basta apontar a camera do seu celular para o QR code
               na plaquinha em cima da sua mesa!.
             </p>
-          </div>
-        </div>
+          </section>
+        </article>
 
         {/* BOTTOM CONTAINER */}
-        <div className="bottom-container">
-          <div className="card-container fade-in">
+        <article className="bottom-container">
+          <section className="card-container fade-in">
             <h2 className="section-title">Colaboradores atentivos</h2>
             <p className="description-title">Qualidade que vem de dentro</p>
             <p className="description-text">
@@ -99,16 +99,18 @@ export default function MainContainer() {
               motivada. Por isso, investimos em tecnologia e no crescimento de
               cada colaborador, criando um ambiente onde todos evoluem juntos.
             </p>
-          </div>
-          <Image
-            width={600}
-            height={800}
-            src={baristas_vertical}
-            alt="Baristas servindo café com grande prazer"
-            className="card-container fade-in "
-            loading="lazy"
-          />
-        </div>
+          </section>
+          <figure>
+            <Image
+              width={600}
+              height={800}
+              src={baristas_vertical}
+              alt="Baristas servindo café com grande prazer"
+              className="card-container fade-in "
+              loading="lazy"
+            />
+          </figure>
+        </article>
       </main>
     </>
   );

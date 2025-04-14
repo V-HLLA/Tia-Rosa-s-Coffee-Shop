@@ -5,7 +5,7 @@ export default function Contact() {
     <main className="main-container fade-in">
       <h1 className="section-title">Fale com a gente</h1>
 
-      <div className="content-container">
+      <article className="content-container">
         <section className="card-container fade-in">
           <h2 className="description-title">
             Estamos prontos para ouvir você!
@@ -60,7 +60,7 @@ export default function Contact() {
             referrerPolicy="strict-origin-when-cross-origin"
           ></iframe>
         </section>
-      </div>
+      </article>
     </main>
   );
 }

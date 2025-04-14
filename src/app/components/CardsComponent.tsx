@@ -2,8 +2,8 @@ import Card from "./Card";
 
 export default function CardsComponent() {
   return (
-    <div className="vertical-card-container">
+    <section className="vertical-card-container">
       <Card />
-    </div>
+    </section>
   );
 }
