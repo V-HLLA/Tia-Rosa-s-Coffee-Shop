@@ -58,7 +58,7 @@ export const NAV_CONTENTS = [
   },
 ];
 
-export const socialLinks = [
+export const SOCIAL_LINKS = [
   {
     name: "Instagram",
     url: "https://www.instagram.com/tiarosacoffee",

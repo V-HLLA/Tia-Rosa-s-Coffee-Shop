@@ -933,6 +933,7 @@ body {
   list-style-type: none;
   list-style: none;
   padding: 0;
+  padding-inline-start: 0;
   color: var(--color-text-light);
 }
 

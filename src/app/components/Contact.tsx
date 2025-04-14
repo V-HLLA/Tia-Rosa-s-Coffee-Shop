@@ -1,3 +1,5 @@
+import { SOCIAL_LINKS } from "../../lib/constants";
+
 export default function Contact() {
   return (
     <main className="main-container fade-in">
@@ -33,37 +35,15 @@ export default function Contact() {
         <section className="card-container fade-in">
           <h2 className="description-title">Onde nos encontrar:</h2>
           <h2 className="description-title">Redes Sociais</h2>
-          <ul className="description-text social-links">
-            <li>
-              Instagram:{" "}
-              <a
-                href="https://www.instagram.com/tiarosacoffee"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                @tiarosacoffee
-              </a>
-            </li>
-            <li>
-              Facebook:{" "}
-              <a
-                href="https://www.facebook.com/tiarosacoffee"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Coffee Shops Tia Rosa
-              </a>
-            </li>
-            <li>
-              TikTok:{" "}
-              <a
-                href="https://www.tiktok.com/@tiarosacoffee"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                @tiarosacoffee
-              </a>
-            </li>
+          <ul className="description-text social-media">
+            {SOCIAL_LINKS.map(({ name, url, label }) => (
+              <li key={name}>
+                {`${name}: `}
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {label}
+                </a>
+              </li>
+            ))}
           </ul>
         </section>
 

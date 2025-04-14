@@ -1,11 +1,11 @@
-import { socialLinks } from "../../lib/constants";
+import { SOCIAL_LINKS } from "../../lib/constants";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <nav aria-label="Social media links">
         <ul className="social-media">
-          {socialLinks.map(({ name, url, label }) => (
+          {SOCIAL_LINKS.map(({ name, url, label }) => (
             <li key={name}>
               <span>{name}: </span>
               <a href={url} target="_blank" rel="noopener noreferrer">
