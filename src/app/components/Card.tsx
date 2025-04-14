@@ -17,6 +17,8 @@ export default function Card() {
             height={1283}
             src={card.imageSrc}
             alt={card.imageAlt}
+            placeholder="blur"
+            blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAEUlEQVR42mPkr2fAAIxDWRAAe5sFl9PNCGwAAAAASUVORK5CYII="
           />
           <h2 className="section-title">{card.title}</h2>
           <p className="description-title">{card.descriptionTitle}</p>

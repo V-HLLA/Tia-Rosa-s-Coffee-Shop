@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { NAV_CONTENTS } from "../../lib/constants";
 import NavButton from "./NavButton";
+import CoffeeIcon from "../../../public/coffee_ico.svg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -16,14 +16,15 @@ export default function Header() {
         <h1 className="logo">
           Tia Rosa's<span className="logo_child">Coffee Shop</span>
         </h1>
-        <Image
-          src="/coffee_ico.svg"
+        <CoffeeIcon className="coffee-icon-svg" />
+        {/* <Image
+          src={CoffeeIcon}
           alt="icone da logo"
           width={19}
           height={19}
           className="products-button-image"
           priority={true}
-        />
+        /> */}
       </Link>
 
       {/* nav hamburguer menu */}

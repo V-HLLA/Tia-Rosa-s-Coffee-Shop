@@ -425,6 +425,7 @@ main {
   --color-accent-2: #7a4e32;
   --color-accent-3: #5f4123;
   --color-accent-4: #2b1a0f;
+  --color-accent-5: #1e120a;
 
   /* Text Colors */
   --color-text-dark: #1e120a;
@@ -432,11 +433,41 @@ main {
 
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #331f12;
+    --color-secondary: #502f1a;
+    --color-accent-1: #e6cfbe;
+    --color-accent-2: #7a4e32;
+    --color-accent-3: #331f12;
+    --color-accent-4: #502f1a;
+    --color-accent-5: #1e120a;
+
+    --color-text-dark: #fffaf3;
+    --color-text-light: #fffaf3;
+  }
+
+  .description-text a {
+    color: var(--color-accent-1);
+  }
+}
+
 body {
   background-color: var(--color-secondary);
 }
 
+.coffee-icon-svg {
+  fill: var(--color-text-light) !important;
+  max-height: 50px;
+  width: 2rem;
+}
+
+.coffee-icon-svg-cta {
+  fill: var(--color-text-light) !important;
+}
+
 /* ---header---start--- */
+
 .header {
   background-color: var(--color-primary);
   display: flex;
@@ -455,10 +486,7 @@ body {
   text-decoration: none;
   display: flex;
   gap: 5px;
-}
-
-.logo_container img {
-  width: 30px;
+  align-items: center;
 }
 
 .logo {
@@ -529,7 +557,7 @@ body {
 
 .nav_buttons--isOpen a:hover {
   transform: scale(1.01);
-  background-color: var(--color-text-dark);
+  background-color: var(--color-accent-5);
 }
 
 @media (max-width: 500px) {
@@ -875,7 +903,7 @@ body {
 .footer {
   border-top: 0.8rem solid var(--color-accent-2);
   background-color: var(--color-accent-3);
-  color: var(--color-secondary);
+  color: var(--color-text-light);
   padding: 1vh 5vw 1vh 5vw;
   display: flex;
   justify-content: space-between;
@@ -894,6 +922,7 @@ body {
   list-style-type: none;
   list-style: none;
   padding: 0;
+  color: var(--color-text-light);
 }
 
 .social-media a {

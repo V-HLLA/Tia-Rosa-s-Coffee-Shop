@@ -4,12 +4,13 @@ import signature_drinks from "../../images/signature_drinks.jpg";
 import qr_code_sign from "../../images/qr_code_sign.png";
 import baristas_vertical from "../../images/Baristas_Vertical.png";
 import Link from "next/link";
+import CoffeeIcon from "../../../public/coffee_ico.svg";
 
 export default function MainContainer() {
   return (
     <>
       <main className="main-container fade-in">
-        <h1 className="section-title">Bem-vindo ao Tia Rosa's Coffee shop!</h1>
+        <h1 className="section-title">Bem-vindo a Tia Rosa's Coffee shop!</h1>
 
         {/* WELCOME SECTION */}
         <div className="content-container">
@@ -48,13 +49,7 @@ export default function MainContainer() {
                 className="products-button animate-on-load"
               >
                 Conheça os Cafés especiais da casa!
-                <Image
-                  width={80}
-                  height={60}
-                  alt="icone da logo"
-                  src="/coffee_ico.svg"
-                  priority={true}
-                />
+                <CoffeeIcon className="coffee-icon-svg-cta" />
               </Link>
             </div>
             <p className="description-title">
