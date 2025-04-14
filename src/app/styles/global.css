@@ -697,7 +697,7 @@ body {
 .card-container {
   flex: 1 1 77vh;
   /* allows two in a row on big screens */
-  min-width: 300px;
+  min-width: 200px;
   /* ensures wrapping below this width */
   max-width: 100%;
   display: flex;
@@ -802,6 +802,13 @@ body {
   flex-grow: 0;
   flex-shrink: 1;
   transform-origin: left;
+  box-shadow: 0px 0px 3px var(--color-accent-5);
+}
+
+@media (max-width:360px) {
+  .products-button {
+    font-size: medium;
+  }
 }
 
 .products-button-image {
