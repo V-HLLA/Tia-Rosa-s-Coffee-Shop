@@ -874,6 +874,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
   }
 
   .card {
@@ -882,6 +883,16 @@ body {
 
   .card img {
     max-height: 70vh;
+  }
+}
+
+@media (max-width:720px) {
+  .vertical-card-container>* {
+    border-bottom: 0.4rem solid var(--color-accent-2);
+  }
+
+  .vertical-card-container>*:last-child {
+    border-bottom: 0
   }
 }
 
