@@ -413,30 +413,24 @@ main {
 }
 
 :root {
-  /* Primary Brand Color */
   --color-primary: #331f12;
-  /* Coffee Brown */
-
-  /* Secondary / Background */
   --color-secondary: #f5f0e6;
 
-  /* Accent Colors */
   --color-accent-1: #e6cfbe;
   --color-accent-2: #7a4e32;
   --color-accent-3: #5f4123;
   --color-accent-4: #2b1a0f;
   --color-accent-5: #1e120a;
 
-  /* Text Colors */
   --color-text-dark: #1e120a;
   --color-text-light: #fffaf3;
-
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #331f12;
-    --color-secondary: #502f1a;
+    --color-secondary: #644225;
+
     --color-accent-1: #e6cfbe;
     --color-accent-2: #7a4e32;
     --color-accent-3: #331f12;
