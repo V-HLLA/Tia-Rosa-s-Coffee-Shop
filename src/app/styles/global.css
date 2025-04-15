@@ -543,26 +543,24 @@ body {
 }
 
 .nav_buttons--isOpen li {
-  text-decoration: none;
-  background-color: var(--color-accent-4);
-  color: var(--color-text-light);
-  text-decoration: none;
-  font-size: 1rem;
+  text-align: left;
+  width: 100vw;
   overflow: hidden;
-  padding-right: 100vw;
-  padding-left: 5vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  text-decoration: none;
+  list-style: none;
 }
 
 .nav_buttons--isOpen a {
+  display: block;
+  padding: 0.5rem;
+  padding-left: 5vw;
   color: var(--color-text-light);
   text-decoration: none;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.nav_buttons--isOpen li:hover {
-  transform: scale(1.01);
+.nav_buttons--isOpen li:hover,
+.nav_buttons--isOpen li:focus {
   background-color: var(--color-accent-5);
 }
 

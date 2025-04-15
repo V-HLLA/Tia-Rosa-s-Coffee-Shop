@@ -12,8 +12,7 @@ export default function Contact() {
           </h2>
           <p className="description-text">
             Tem alguma dúvida, sugestão ou deseja saber mais sobre nossos
-            produtos e serviços? Preencha o formulário abaixo ou entre em
-            contato pelos nossos canais oficiais. Será um prazer atender você!
+            produtos e serviços? Entre em contato com a gente.
           </p>
         </section>
 

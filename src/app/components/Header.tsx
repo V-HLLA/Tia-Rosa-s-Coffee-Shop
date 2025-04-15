@@ -4,7 +4,6 @@ import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { NAV_CONTENTS } from "../../lib/constants";
-import NavButton from "./NavButton";
 import CoffeeIcon from "../../../public/coffee_ico.svg";
 
 export default function Header() {
@@ -30,13 +29,18 @@ export default function Header() {
           </i>
         </button>
         <ul className={isOpen ? `nav_buttons--isOpen` : `nav_buttons`}>
-          {NAV_CONTENTS.map((navContent, index) => (
+          {NAV_CONTENTS.map(({ routeName, routeTo }, index) => (
             <li key={index}>
-              <NavButton
-                children={navContent.children}
-                routeTo={navContent.routeTo}
-                setIsOpen={setIsOpen}
-              />
+              <Link
+                href={routeTo}
+                onClick={() => {
+                  if (isOpen) {
+                    setIsOpen((prev) => !prev);
+                  }
+                }}
+              >
+                {routeName}
+              </Link>
             </li>
           ))}
         </ul>

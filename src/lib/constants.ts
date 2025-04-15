@@ -45,15 +45,15 @@ export const CARD_CONTENTS = [
 
 export const NAV_CONTENTS = [
   {
-    children: "inicio",
+    routeName: "inicio",
     routeTo: "/",
   },
   {
-    children: "Produtos",
+    routeName: "Produtos",
     routeTo: "/produtos",
   },
   {
-    children: "Contato",
+    routeName: "Contato",
     routeTo: "/contato",
   },
 ];
