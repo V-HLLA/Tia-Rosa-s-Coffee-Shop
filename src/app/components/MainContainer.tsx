@@ -1,8 +1,4 @@
 import Image from "next/image";
-import coffee_shop_ambient from "../../images/coffee_shop_ambient.png";
-import signature_drinks from "../../images/signature_drinks.jpg";
-import qr_code_sign from "../../images/qr_code_sign.png";
-import baristas_vertical from "../../images/Baristas_Vertical.png";
 import Link from "next/link";
 import CoffeeIcon from "../../../public/coffee_ico.svg";
 
@@ -16,7 +12,7 @@ export default function MainContainer() {
         <article className="content-container">
           <section className="card-container fade-in">
             <Image
-              src={coffee_shop_ambient}
+              src="/coffee_shop_ambient.png"
               alt="loja Tia Rosa's coffee shop"
               width={800}
               height={600}
@@ -38,7 +34,7 @@ export default function MainContainer() {
             <Image
               width={800}
               height={600}
-              src={signature_drinks}
+              src="/signature_drinks.jpg"
               alt="Cafés da casa"
               className="card-image"
               priority={true}
@@ -67,7 +63,7 @@ export default function MainContainer() {
             <Image
               width={800}
               height={600}
-              src={qr_code_sign}
+              src="/qr_code_sign.png"
               alt="QR code para o wifi"
               loading="lazy"
               className="card-image"
@@ -104,7 +100,7 @@ export default function MainContainer() {
             <Image
               width={600}
               height={800}
-              src={baristas_vertical}
+              src="/Baristas_Vertical.png"
               alt="Baristas servindo café com grande prazer"
               className="card-container fade-in "
               loading="lazy"
