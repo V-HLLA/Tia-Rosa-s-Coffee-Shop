@@ -17,6 +17,7 @@ export default function Card() {
             height={1283}
             src={card.imageSrc}
             alt={card.imageAlt}
+            priority={true}
             placeholder="blur"
             blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAEUlEQVR42mPkr2fAAIxDWRAAe5sFl9PNCGwAAAAASUVORK5CYII="
           />
