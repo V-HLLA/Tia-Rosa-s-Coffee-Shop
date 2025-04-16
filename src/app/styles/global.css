@@ -427,6 +427,23 @@ main {
   --color-text-link: #5f4123;
 }
 
+
+
+[data-theme='light'] {
+  --color-primary: #331f12;
+  --color-secondary: #f5f0e6;
+
+  --color-accent-1: #e6cfbe;
+  --color-accent-2: #7a4e32;
+  --color-accent-3: #5f4123;
+  --color-accent-4: #2b1a0f;
+  --color-accent-5: #1e120a;
+
+  --color-text-dark: #1e120a;
+  --color-text-light: #fffaf3;
+  --color-text-link: #5f4123;
+}
+
 [data-theme='dark'] {
   --color-primary: #331f12;
   --color-secondary: #644225;
@@ -505,6 +522,7 @@ body {
   border: 0;
   background-color: transparent;
   display: flex;
+  cursor: pointer;
 }
 
 .theme-button svg {
@@ -687,6 +705,7 @@ body {
   gap: 10px;
   padding: 2vh 5vw 2vh 5vw;
   min-height: 75vh;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   /* flex-wrap: wrap; */
 }
 
@@ -703,12 +722,8 @@ body {
 }
 
 @media (max-width: 888px) {
-  .content-container>*:not(:first-child) {
+  .content-container>*:nth-child(n+2) {
     border-top: 0.4rem solid var(--color-accent-2);
-  }
-
-  .content-container>*:last-child {
-    border-top: 0
   }
 }
 
@@ -952,7 +967,7 @@ body {
 /* ---footer---start--- */
 .footer {
   border-top: 0.8rem solid var(--color-accent-2);
-  background-color: var(--color-accent-3);
+  background-color: var(--color-primary);
   color: var(--color-text-light);
   padding: 1vh 5vw 1vh 5vw;
   display: flex;
@@ -1024,6 +1039,18 @@ body {
   .footer address {
     text-align: center;
   }
+}
+
+.github-account {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.github-account svg {
+  width: 1.5rem;
+  height: auto;
 }
 
 /* ---footer-end--- */

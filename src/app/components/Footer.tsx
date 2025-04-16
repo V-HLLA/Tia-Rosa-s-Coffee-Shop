@@ -1,4 +1,5 @@
 import { SOCIAL_LINKS } from "../../lib/constants";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
           <br />
           Asa Sul, Brasília - DF, 70333-900
         </address>
-        <span>
+        <span className="github-account">
           Created and designed by{" "}
           <a
             href="https://github.com/V-HLLA"
@@ -28,6 +29,7 @@ export default function Footer() {
           >
             V-HLLA
           </a>
+          <GitHubIcon />
         </span>
       </div>
     </footer>
