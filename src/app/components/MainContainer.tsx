@@ -1,6 +1,6 @@
+import { CoffeeOutlined } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
-import CoffeeIcon from "../../../public/coffee_ico.svg";
 
 export default function MainContainer() {
   return (
@@ -45,7 +45,7 @@ export default function MainContainer() {
                 className="products-button animate-on-load"
               >
                 Conheça os Cafés especiais da casa!
-                <CoffeeIcon className="coffee-icon-svg-cta" />
+                <CoffeeOutlined className="coffee-icon-svg-cta" />
               </Link>
             </div>
             <p className="description-title">
@@ -96,16 +96,14 @@ export default function MainContainer() {
               cada colaborador, criando um ambiente onde todos evoluem juntos.
             </p>
           </section>
-          <figure>
-            <Image
-              width={600}
-              height={800}
-              src="/Baristas_Vertical.png"
-              alt="Baristas servindo café com grande prazer"
-              className="card-container fade-in "
-              loading="lazy"
-            />
-          </figure>
+          <Image
+            width={600}
+            height={800}
+            src="/baristas_vertical.png"
+            alt="Baristas servindo café com grande prazer"
+            className="card-container fade-in "
+            loading="lazy"
+          />
         </article>
       </main>
     </>

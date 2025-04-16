@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { NAV_CONTENTS } from "../../lib/constants";
 import CoffeeIcon from "../../../public/coffee_ico.svg";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -18,13 +19,14 @@ export default function Header() {
         <CoffeeIcon className="coffee-icon-svg" />
       </Link>
 
+      <ThemeToggle />
       {/* nav hamburguer menu */}
       <nav className="nav_container">
         <button
           className={isOpen ? "menu-isOpen" : "menu"}
           onClick={() => setIsOpen((prev) => !prev)}
         >
-          <i className="material-symbols-outlined">
+          <i className="hamburguer-button">
             {isOpen ? <CloseIcon /> : <MenuIcon />}
           </i>
         </button>
