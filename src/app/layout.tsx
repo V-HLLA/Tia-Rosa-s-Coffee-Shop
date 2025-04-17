@@ -18,13 +18,13 @@ export const metadata: Metadata = {
       {
         rel: "icon",
         sizes: "192x192",
-        url: "/android-chrome-192x192",
+        url: "/android-chrome-192x192.png",
         type: "image/png",
       },
       {
         rel: "icon",
         sizes: "512x512",
-        url: "/android-chrome-512x512",
+        url: "/android-chrome-512x512.png",
         type: "image/png",
       },
     ],
