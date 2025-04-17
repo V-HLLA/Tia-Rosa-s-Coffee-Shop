@@ -6,8 +6,14 @@ import "../app/styles/global.css";
 export const metadata: Metadata = {
   title: "Tia Rosa's Coffee Shop",
   description: "A cafeteria mais adorada do Brasil!",
+
   icons: {
-    icon: "/coffee_ico.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 
