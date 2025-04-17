@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   title: "Tia Rosa's Coffee Shop",
   description: "A cafeteria mais adorada do Brasil!",
 
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
+  // icons: {
+  //   icon: [
+  //     { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+  //     { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+  //     { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+  //   ],
+  //   apple: "/apple-touch-icon.png",
+  // },
 };
 
 export const viewport: Viewport = {
@@ -31,6 +31,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
+      <meta
+        name="apple-mobile-web-app-title"
+        content="Tia Rosa's Coffee shop"
+      />
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
