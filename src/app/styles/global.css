@@ -427,23 +427,6 @@ main {
   --color-text-link: #5f4123;
 }
 
-
-
-[data-theme='light'] {
-  --color-primary: #331f12;
-  --color-secondary: #f5f0e6;
-
-  --color-accent-1: #e6cfbe;
-  --color-accent-2: #7a4e32;
-  --color-accent-3: #5f4123;
-  --color-accent-4: #2b1a0f;
-  --color-accent-5: #1e120a;
-
-  --color-text-dark: #1e120a;
-  --color-text-light: #fffaf3;
-  --color-text-link: #5f4123;
-}
-
 [data-theme='dark'] {
   --color-primary: #331f12;
   --color-secondary: #644225;
@@ -461,6 +444,10 @@ main {
 
 .description-text a {
   color: var(--color-text-link);
+}
+
+.description-text {
+  margin-block-end: 0;
 }
 
 body {
@@ -649,7 +636,7 @@ body {
 .loading {
   display: flex;
   background-color: var(--color-secondary);
-  color: var(--color-text-dark);
+  color: var(--color-text-link);
   justify-content: center;
   align-items: center;
   height: 85vh;
@@ -681,7 +668,7 @@ body {
 
 .loading svg {
   max-width: 4vw;
-  color: var(--color-accent-2);
+  color: var(--color-text-link);
   animation: pulseFill 1.5s infinite;
 }
 
@@ -702,11 +689,9 @@ body {
   justify-content: center;
   flex-grow: 1;
   flex-shrink: 1;
-  gap: 10px;
   padding: 2vh 5vw 2vh 5vw;
   min-height: 75vh;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-  /* flex-wrap: wrap; */
 }
 
 .content-container {
@@ -888,6 +873,74 @@ body {
 /* ---main---end--- */
 
 /* ---products---route---start */
+.products-page-top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-button {
+  display: flex;
+  font-family: "Winky Sans", sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  flex-grow: 0;
+  flex-shrink: 1;
+  box-shadow: 0px 0px 5px var(--color-accent-2);
+  margin-left: auto;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transform-origin: center;
+  margin-top: 1rem;
+
+  &.animate-button {
+    opacity: 0;
+    animation: 2s lateShowUp ease-in-out forwards;
+    animation-delay: 2.3s;
+  }
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+  background-color: var(--color-accent-3);
+}
+
+.contact-button:active {
+  transform: scale(0.98);
+}
+
+@keyframes lateShowUp {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width:720px) {
+  .contact-button {
+    margin-left: 0;
+    max-width: 215px;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
 .vertical-card-container {
   display: inline-flex;
   flex: 1 1 100%;
@@ -940,15 +993,15 @@ body {
   }
 }
 
-@media (max-width:720px) {
+/* @media (max-width:720px) {
   .vertical-card-container>* {
-    border-bottom: 0.4rem solid var(--color-accent-2);
+    border-top: 0.4rem solid var(--color-accent-2);
   }
 
   .vertical-card-container>*:last-child {
-    border-bottom: 0
+    border-top: 0
   }
-}
+} */
 
 @keyframes slideInUp {
   0% {
@@ -964,6 +1017,43 @@ body {
 
 /* ---products---route---end */
 
+/* ---contact---route---start--- */
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.spinner-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background);
+  z-index: 1;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--color-text-link);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---contact---route---end--- */
+
 /* ---footer---start--- */
 .footer {
   border-top: 0.8rem solid var(--color-accent-2);
@@ -976,6 +1066,7 @@ body {
   width: 100%;
   font-size: medium;
   flex-shrink: 1;
+  margin-top: 1rem;
 }
 
 @media (max-width:530px) {

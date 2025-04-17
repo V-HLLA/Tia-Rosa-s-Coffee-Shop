@@ -8,7 +8,7 @@ export const CARD_CONTENTS = [
     description: `Intenso, encorpado e irresistível. Nosso espresso é feito com grãos
         selecionados, moídos na hora e extraídos com precisão para entregar um
         café curto, cremoso e cheio de sabor. Uma explosão de aroma em cada
-        gole. Experimente e apaixone-se pelo essencial.`,
+        gole.`,
   },
   {
     id: "Cappuccino Artesanal",
