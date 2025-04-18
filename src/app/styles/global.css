@@ -452,6 +452,7 @@ main {
 
 body {
   background-color: var(--color-secondary);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .coffee-icon-svg {
@@ -1089,6 +1090,26 @@ body {
 
 .social-media-links-footer {
   color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.footer-socials {
+  display: flex;
+  font-size: medium;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width:530px) {
+  .footer-socials {
+    font-size: small;
+  }
 }
 
 .social-media-links-footer a {
@@ -1109,7 +1130,7 @@ body {
   font-style: italic;
 }
 
-@media (max-width:430px) {
+@media (max-width:479px) {
   .footer {
     font-size: smaller;
     flex-wrap: wrap;
@@ -1121,6 +1142,10 @@ body {
 
   .social-media {
     margin-bottom: 0;
+  }
+
+  .footer-socials {
+    align-items: center;
   }
 
   .footer-contacts {

@@ -1,19 +1,25 @@
-import { SOCIAL_LINKS } from "../../lib/constants";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { SOCIAL_LINKS } from "../../lib/socialMediaIcons";
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <ul className="social-media">
-        {SOCIAL_LINKS.map(({ name, url, label }) => (
-          <li key={name} className="social-media-links-footer">
-            <span>{name}: </span>
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div className="footer-socials">
+        <ul className="description-text social-media footer-socials">
+          {SOCIAL_LINKS.map(({ name, url, label, icon }) => (
+            <li
+              key={name}
+              className="social-media-icons social-media-links-footer"
+            >
+              {icon}
+              {`${name}: `}
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className="footer-contacts">
         <address>
           Endereço: Setor Comercial Sul Quadra 8

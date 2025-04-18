@@ -45,11 +45,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <meta
-        name="apple-mobile-web-app-title"
-        content="Tia Rosa's Coffee shop"
-      />
       <head>
+        <meta
+          name="apple-mobile-web-app-title"
+          content="Tia Rosa's Coffee shop"
+        />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

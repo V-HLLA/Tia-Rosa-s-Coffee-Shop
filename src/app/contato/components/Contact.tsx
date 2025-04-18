@@ -1,4 +1,4 @@
-import { SOCIAL_LINKS } from "../../../lib/constants";
+import { SOCIAL_LINKS } from "../../../lib/socialMediaIcons";
 import Location from "./Location";
 
 export default function Contact() {
@@ -7,25 +7,6 @@ export default function Contact() {
       <h1 className="section-title">Fale com a gente</h1>
 
       <article className="content-container">
-        <section className="card-container fade-in map-container">
-          <h2 className="description-title">Localização</h2>
-          <Location />
-        </section>
-
-        <section className="card-container fade-in">
-          <h2 className="description-title">Redes sociais:</h2>
-          <ul className="description-text social-media">
-            {SOCIAL_LINKS.map(({ name, url, label }) => (
-              <li key={name}>
-                {`${name}: `}
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-
         <section className="card-container fade-in">
           <h2 className="description-title">
             Estamos prontos para ouvir você!
@@ -44,11 +25,28 @@ export default function Contact() {
             <br />
             <strong>Telefone:</strong> (61) 9 98715-6775
             <br />
-            <strong>Email:</strong>{" "}
-            <a href="mailto:contato@tiarosacoffee.com.br">
-              contato@tiarosacoffee.com.br
-            </a>
+            <strong>Email:</strong> <span>contato@tiarosacoffee.com.br</span>
           </address>
+        </section>
+
+        <section className="card-container fade-in map-container">
+          <h2 className="description-title">Localização</h2>
+          <Location />
+        </section>
+
+        <section className="card-container fade-in">
+          <h2 className="description-title">Redes sociais:</h2>
+          <ul className="description-text social-media">
+            {SOCIAL_LINKS.map(({ name, url, label, icon }) => (
+              <li key={name} className="social-media-icons">
+                {icon}
+                {`${name}: `}
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
       </article>
     </main>
