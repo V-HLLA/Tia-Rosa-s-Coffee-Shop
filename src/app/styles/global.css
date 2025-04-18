@@ -1104,6 +1104,7 @@ body {
   font-size: medium;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
 }
 
 @media (max-width:530px) {
