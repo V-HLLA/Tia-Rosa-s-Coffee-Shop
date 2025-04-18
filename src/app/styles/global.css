@@ -1112,6 +1112,14 @@ body {
   color: var(--color-text-dark);
 }
 
+.social-media-contact {
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  padding-inline-start: 0;
+  color: var(--color-text-dark);
+}
+
 .social-media-links-footer {
   color: var(--color-text-light);
   display: flex;

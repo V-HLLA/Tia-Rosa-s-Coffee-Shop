@@ -7,6 +7,31 @@ export default function Contact() {
       <h1 className="section-title">Fale com a gente</h1>
 
       <article className="content-container">
+        <section className="card-container fade-in">
+          <h2 className="description-title">
+            Estamos prontos para ouvir você!
+          </h2>
+          <p className="description-text">
+            Tem alguma dúvida, sugestão ou deseja saber mais sobre nossos
+            produtos e serviços? Entre em contato com a gente.
+          </p>
+        </section>
+
+        <section className="card-container fade-in">
+          <h2 className="description-title">Redes sociais:</h2>
+          <ul className="description-text social-media-contact">
+            {SOCIAL_LINKS.map(({ name, url, label, icon }) => (
+              <li key={name} className="social-media-icons">
+                {icon}
+                {`${name}: `}
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <section className="card-container fade-in map-container">
           <h2 className="description-title">Localização</h2>
           <Location />
@@ -22,31 +47,6 @@ export default function Contact() {
             <br />
             <strong>Email:</strong> <span>contato@tiarosacoffee.com.br</span>
           </address>
-        </section>
-
-        <section className="card-container fade-in">
-          <h2 className="description-title">
-            Estamos prontos para ouvir você!
-          </h2>
-          <p className="description-text">
-            Tem alguma dúvida, sugestão ou deseja saber mais sobre nossos
-            produtos e serviços? Entre em contato com a gente.
-          </p>
-        </section>
-
-        <section className="card-container fade-in">
-          <h2 className="description-title">Redes sociais:</h2>
-          <ul className="description-text social-media">
-            {SOCIAL_LINKS.map(({ name, url, label, icon }) => (
-              <li key={name} className="social-media-icons">
-                {icon}
-                {`${name}: `}
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
         </section>
       </article>
     </main>
