@@ -587,6 +587,7 @@ body {
   color: var(--color-text-light);
   text-decoration: none;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: bold;
 }
 
 .nav_buttons--isOpen li:hover,
