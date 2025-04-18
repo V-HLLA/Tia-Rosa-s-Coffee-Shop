@@ -1118,7 +1118,7 @@ body {
   gap: 0.3rem;
 }
 
-.footer-socials {
+.footer-social-links-section {
   display: flex !important;
   font-size: medium;
   flex-direction: column;
@@ -1126,13 +1126,13 @@ body {
   margin: 0;
 }
 
-.footer-socials svg {
+.footer-social-links-section svg {
   width: 20px;
   height: auto;
 }
 
 @media (max-width:530px) {
-  .footer-socials {
+  .footer-social-links-section {
     font-size: small;
   }
 }

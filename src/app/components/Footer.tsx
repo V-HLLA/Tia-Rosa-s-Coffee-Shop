@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div>
-        <ul className="description-text social-media footer-socials">
+        <ul className="description-text social-media footer-social-links-section">
           {SOCIAL_LINKS.map(({ name, url, label, icon }) => (
             <li
               key={name}
