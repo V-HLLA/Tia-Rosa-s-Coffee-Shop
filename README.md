@@ -2,7 +2,7 @@
 
 This repository contains the development of a website for **Tia Rosa's Coffee Shop**, created as part of an academic project for IESB University.
 
-![preview img] (/preview.png)
+![preview img](/preview.png)
 
 ## Deployment
 
@@ -46,7 +46,7 @@ The project was originally built using **Vite** and **React with TypeScript** an
 
 Este repositório contém o desenvolvimento de um site para a **Tia Rosa's Coffee Shop**, criado como parte de um projeto acadêmico da faculdade **IESB**.
 
-![preview img] (/preview.png)
+![preview img](/preview.png)
 
 ## Implementação
 
