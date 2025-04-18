@@ -1138,7 +1138,7 @@ body {
     justify-content: center;
     text-align: center;
     gap: 0.5rem;
-    padding-bottom: 1.5rem;
+    padding: 1rem;
   }
 
   .social-media {
