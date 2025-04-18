@@ -26,7 +26,11 @@ export default function Header() {
           className={isOpen ? "menu-isOpen" : "menu"}
           onClick={() => setIsOpen((prev) => !prev)}
         >
-          <i className="hamburguer-button">
+          <i
+            className={`hamburguer-button ${
+              isOpen ? "hamburguer-button--rotated" : ""
+            }`}
+          >
             {isOpen ? <CloseIcon /> : <MenuIcon />}
           </i>
         </button>
