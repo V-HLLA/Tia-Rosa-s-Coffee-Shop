@@ -6,6 +6,7 @@ import "../app/styles/global.css";
 export const metadata: Metadata = {
   title: "Tia Rosa's Coffee Shop",
   description: "A cafeteria mais adorada do Brasil!",
+  keywords: ["cafeteria", "café", "Tia Rosa", "coffee shop", "Brasil"],
 
   icons: {
     icon: [
@@ -26,6 +27,21 @@ export const metadata: Metadata = {
         sizes: "512x512",
         url: "/android-chrome-512x512.png",
         type: "image/png",
+      },
+    ],
+  },
+
+  openGraph: {
+    title: "Tia Rosa's Coffee Shop",
+    description: "A cafeteria mais adorada do Brasil!",
+    url: "https://tia-rosa-coffee-shop.vercel.app/",
+    type: "website",
+    images: [
+      {
+        url: "/preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tia Rosa's Coffee Shop",
       },
     ],
   },
