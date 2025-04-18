@@ -1119,7 +1119,7 @@ body {
 }
 
 .footer-socials {
-  display: flex;
+  display: flex !important;
   font-size: medium;
   flex-direction: column;
   justify-content: center;

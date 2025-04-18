@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     ],
   },
 
+  metadataBase: new URL("https://tia-rosa-coffee-shop.vercel.app/"),
   openGraph: {
     title: "Tia Rosa's Coffee Shop",
     description: "A cafeteria mais adorada do Brasil!",

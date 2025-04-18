@@ -4,7 +4,7 @@ import { SOCIAL_LINKS } from "../../lib/socialMediaIcons";
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-socials">
+      <div>
         <ul className="description-text social-media footer-socials">
           {SOCIAL_LINKS.map(({ name, url, label, icon }) => (
             <li
