@@ -34,7 +34,7 @@ This project demonstrates skills in front-end development, componentization, and
 ## Technologies, Tools, and Credits
 
 - **Next.js**
-- **Next.js <Image> and <Link>**
+- **Next.js "<Image>" and "<Link>"**
 - **Next.js App Router**
 - **Material UI**
 - Hosting via [Vercel](https://vercel.com/)
@@ -98,7 +98,7 @@ Este projeto demonstra habilidades em desenvolvimento front-end, componentizaç�
 ## Tecnologias, Ferramentas e Créditos
 
 - **Next.js**
-- **Next.js <Image> e <Link>**
+- **Next.js "<Image>" e "<Link>"**
 - **Next.js App Router**
 - **Material UI**
 - Hospedagem via [Vercel](https://vercel.com/)
