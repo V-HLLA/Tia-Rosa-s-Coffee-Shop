@@ -2,6 +2,8 @@
 
 This repository contains the development of a website for **Tia Rosa's Coffee Shop**, created as part of an academic project for IESB University.
 
+![preview img] (/preview.png)
+
 ## Deployment
 
 You can view the live deployment of the website here: [Tia Rosa's Coffee Shop - Live](https://tia-rosa-coffee-shop.vercel.app)
@@ -43,6 +45,8 @@ The project was originally built using **Vite** and **React with TypeScript** an
 # Tia Rosa's Coffee Shop ☕ – Projeto Acadêmico (IESB) (PT-BR)
 
 Este repositório contém o desenvolvimento de um site para a **Tia Rosa's Coffee Shop**, criado como parte de um projeto acadêmico da faculdade **IESB**.
+
+![preview img] (/preview.png)
 
 ## Implementação
 
