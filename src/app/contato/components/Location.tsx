@@ -1,12 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Location() {
   const [iframeLoading, setIframeLoading] = useState(true);
 
-  setTimeout(() => {
-    setIframeLoading(false);
-  }, 300);
+  useEffect(() => {
+    const fallbackTimer = setTimeout(() => {
+      setIframeLoading(false);
+    }, 300);
+
+    return () => clearTimeout(fallbackTimer);
+  }, []);
 
   return (
     <div className="iframe-wrapper">
