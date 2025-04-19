@@ -1144,12 +1144,6 @@ body {
   height: auto;
 }
 
-@media (max-width:530px) {
-  .footer-social-links-section {
-    font-size: small;
-  }
-}
-
 .social-media-links-footer a {
   color: var(--color-text-light);
   text-decoration: underline;
@@ -1186,6 +1180,12 @@ body {
 .github-account svg {
   width: 1.5rem;
   height: auto;
+}
+
+@media (max-width:530px) {
+  .footer-social-links-section {
+    font-size: small;
+  }
 }
 
 @media (max-width:479px) {
