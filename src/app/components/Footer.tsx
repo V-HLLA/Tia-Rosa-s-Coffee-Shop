@@ -28,7 +28,7 @@ export default function Footer() {
             Asa Sul, Brasília - DF, 70333-900
           </address>
           <span className="github-account">
-            Created and designed by{" "}
+            Elaborado por
             <a
               href="https://github.com/V-HLLA"
               target="_blank"
